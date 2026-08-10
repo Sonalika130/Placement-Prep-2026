@@ -1,4 +1,4 @@
-public class Character {
+public class CharacterrrBasics {
     public static void main(String args[]){
         //character with single quote
         //string double quote
