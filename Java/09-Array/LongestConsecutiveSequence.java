@@ -2,7 +2,7 @@
 //need to return the longest ones's length
 //use of hashset and set.contains()
 //just like kadens,count,maxcount(length)
-//s-O(1),t-O(n)avg
+//s-O(n),t-O(n)avg
 import java.util.*;//import hashset
 class LongestConsecutiveSequence {
     public static int longestConsecutiveSequence(int arr[]){
@@ -24,7 +24,9 @@ class LongestConsecutiveSequence {
                 int  count=1;
 
             if(!set.contains(num-1)){
-                int current=num;
+                //using num algo good,
+                //but here its representing starting element
+                int current=num;//extending current
                 
                 //for iterating the rest numbers in array to get consecutive numbers
                 //while for iteration++
