@@ -17,8 +17,9 @@ public class BoyerMooreVotingAlgo {
         int count=0;//initially
         //use of no indices we need only elements
         for(int num:arr){
-            if(count==0)//choose a new candidate
-            candidate=num;//assign number to candidate
+            {if(count==0)//choose a new candidate
+            candidate=num;}//not always checked e.g.{5,6,6}
+            //assign number to candidate
             if(candidate==num)//same
                 count++;
             else
