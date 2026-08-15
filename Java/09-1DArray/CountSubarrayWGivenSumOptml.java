@@ -20,6 +20,7 @@ public class CountSubarrayWGivenSumOptml {
             if(map.containsKey(sum-k)){
                 //increment how many time that subarray is occuring
                 //store sum but check count value from that
+                //also adding how many times earleir prefix have occurred
                 count+=map.get(sum-k);
             }
             //put the sum and frequncy
@@ -33,9 +34,12 @@ public class CountSubarrayWGivenSumOptml {
 
     }
     public static void main(String args[]){
-        int arr[]={2,1,2,1};
+        int arr1[]={2,1,2,1};
+        int arr2[]={2,1,3,2,1};
         int target=3;
-        System.out.println("count of subarrays with given sum:"+countSubArray(arr,target));
+        System.out.println("count of subarrays with given sum:"+countSubArray(arr1,target));
+                System.out.println("count of subarrays with given sum:"+countSubArray(arr2,target));
+
     }
     
 }
