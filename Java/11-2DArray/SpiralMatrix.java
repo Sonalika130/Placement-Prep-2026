@@ -5,6 +5,7 @@
 //until l>r,b>t
 //with every movement one of the row or col shrinks
 //stop when top > bottom or left > right comes at one same place
+//use of if before last 2 iterations as even after while it needs to be checked for 1d array
 public class SpiralMatrix {
     public static void spiralMatrix(int arr[][]){
         int top=0;//indicates row at top
@@ -26,13 +27,15 @@ public class SpiralMatrix {
             }
             right--;//move inward now col-1 is rightmost
             //now on bottom move right to left
+            if(top<=bottom){
             for(int j=right;j>=left;j--){
                 System.out.print(arr[bottom][j]+" ");
-            }
+            }}
             bottom--;//move inward b=1 now on left move bottom to top
+            if(left<=right){
             for(int j=bottom;j>=top;j--){
                 System.out.print(arr[j][left]+" ");
-            }
+            }}
             left++;//move next to right and l=1 and stop when left right or t or bottom come at one place
 
 
